@@ -1,0 +1,52 @@
+plugins {
+id 'java'
+}
+
+
+group 'com.sebahadin'
+version '1.0'
+
+
+sourceCompatibility = '1.8'
+
+
+tasks.withType(JavaCompile) {
+options.encoding = 'UTF-8'
+}
+
+
+def srcDir = 'src'
+
+
+def allPackages = [
+"src",
+"src.core",
+"src.strategy",
+"src.utils",
+"src.config"
+]
+
+
+sourceSets {
+main {
+java {
+srcDirs = [srcDir]
+}
+}
+}
+
+
+jar {
+manifest {
+attributes(
+'Main-Class': 'src.Main'
+)
+}
+archiveBaseName.set('file-search-engine')
+from sourceSets.main.output
+}
+
+
+dependencies {
+// No external dependencies required
+}
