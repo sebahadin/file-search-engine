@@ -1,0 +1,20 @@
+# Compiled class files
+/out/
+*.class
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Test data (optional, if you don’t want to commit dummy files)
+test/
+
+# IDE / Editor files
+.idea/
+.vscode/
+*.iml
